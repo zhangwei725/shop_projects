@@ -92,6 +92,37 @@
         }
 
     </style>
+    {#    分类菜单样式#}
+    <style type="text/css">
+        #cate_id {
+            height: 500px;
+            position: relative;
+        }
+
+        #cate_id > li {
+            width: 200px;
+        }
+
+        #cate_id > li:hover {
+            background: aqua;
+        }
+
+        .sub {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 200px;
+            width: 800px;
+            height: 500px;
+            background: aqua;
+        }
+
+        .sub div {
+            display: inline-block;
+        }
+
+    </style>
+
 
 {% endblock %}
 
@@ -104,8 +135,21 @@
         $(function () {
             $('#b04').unslider({
                 dots: true
+            });
+
+            $("#cate_id>li").mouseover(function () {
+                {#当li鼠标移入之后,当前的ul要显示,其他的要隐藏#}
+                $('.sub').hide();
+                $(this).find('ul').show()
             })
+
+            $("#cate_id").mouseleave(function () {
+                $(this).find('ul').hide()
+            })
+
         })
+
+
     </script>
 {% endblock %}
 
