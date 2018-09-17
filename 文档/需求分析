@@ -16,8 +16,24 @@
 1.2>右击apps目录 make为Sources Root 。这样pycharm就会自动找到文件之间的引用依赖
 1.3> 在settings文件加入路径声明，sys.path.insert(0,os.path.join(BASE_DIR,'apps'))
 2>注册app
+
 3>注册二级路由
+
 4>设置首页
+
+三 建立模型
+
+四 编写视图
+
+五 编写基础模板
+
+
+
+
+
+
+
+
 
 
 

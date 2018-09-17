@@ -2,7 +2,9 @@ import os
 import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# sys.path.insert(0,os.path.join(BASE_DIR,'apps'))
+# 把apps添加到python的扫描的环境中
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+
 SECRET_KEY = 'xpd*oa^v$&=o4j^a*p@$!+jfcnj9(0+h@z33!k(xo986bbrjfj'
 
 DEBUG = True
