@@ -110,7 +110,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # 配置静态资源目录
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'apps/home/static'),
+)
 # 配置多媒体资源目录
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
