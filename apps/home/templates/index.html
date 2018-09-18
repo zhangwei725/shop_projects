@@ -121,6 +121,39 @@
             display: inline-block;
         }
 
+        .search {
+            margin-left: 100px;
+            padding: 10px;
+        }
+
+        .search > form {
+            background: red;
+            display: inline-block;
+            margin-left: 100px;
+            min-width: 250px;
+            height: 32px;
+            padding: 1px;
+        }
+
+        .search > form > input {
+            height: 30px;
+            outline: none;
+        }
+
+        .search > form > input[type=text] {
+            width: 80%;
+
+            padding-left: 5px;
+        }
+
+        .search > form > input[type=submit] {
+            width: 18%;
+            border: none;
+            background: none;
+            margin-left: -2px;
+            margin-top: -1px;
+        }
+
     </style>
 
 
@@ -154,13 +187,12 @@
 {% endblock %}
 
 
-
 {% block page_head %}
     {#    头部部分#}
     {#    1>登录注销  购物车 订单#}
-    {% include 'include/common/top.html' %}
+    {% include 'include/common/common_top.html' %}
     {#    logo 搜索按钮#}
-    {% include 'include/common/serach.html' %}
+    {% include 'include/common/common_serach.html' %}
 {% endblock %}
 
 {% block page_main %}

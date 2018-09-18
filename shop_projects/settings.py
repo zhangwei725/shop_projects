@@ -19,10 +19,11 @@ SYS_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
 ]
 # 第三方扩展的app
-EXT_APPS = []
+EXT_APPS = [
+
+]
 # 自定义的app
 MY_APPS = [
     # 用户模块
@@ -39,6 +40,8 @@ MY_APPS = [
     'apps.cate_detail',
     # 支付模块
     'apps.pay',
+    # 搜索模块
+    'apps.search',
 ]
 # 注册apps
 INSTALLED_APPS = SYS_APPS + EXT_APPS + MY_APPS

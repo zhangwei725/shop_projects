@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load  staticfiles %}
+{% block page_css %}
+{% endblock %}
+{% block title %}
+    搜索
+{% endblock %}
+
+{% block page_head %}
+    {% include 'include/common/common_top.html' %}
+    {% include 'include/common/common_serach.html' %}
+{% endblock %}
+
+{% block page_main %}
+    {% include  'include/search_result.html' %}
+{% endblock %}
+
+{% block page_footer %}
+
+{% endblock %}
