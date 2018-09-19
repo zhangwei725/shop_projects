@@ -1,6 +1,6 @@
-    <ul class="nav nav-pills" id="navigation_id">
-        <li><span>商品分类</span></li>
-        {% for navi in  navigations %}
-            <li><a href="#">{{ navi.nav_name }} </a></li>
-        {% endfor %}
-    </ul>
+<ul class="nav nav-pills" id="navigation_id">
+    <li class="nav_first"><span class='glyphicon glyphicon glyphicon-th-list'></span><span>商品分类</span></li>
+    {% for navi in  navigations %}
+        <li class=""><a href="#">{{ navi.nav_name }} </a></li>
+    {% endfor %}
+</ul>

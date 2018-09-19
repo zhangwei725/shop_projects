@@ -5,8 +5,8 @@
             <ul class="sub">
                 {% for sub in category.subs %}
                     <li>
-                        <a href="#">{{ sub.name }}</a>
-                        <div>
+                        <div class="sub1"><a href="#">{{ sub.name }}</a></div>
+                        <div class="sub2">
                             {% for sub2 in sub.subs2 %}
                                 <a>{{ sub2.name }}</a>
                             {% endfor %}

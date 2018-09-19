@@ -1,0 +1,171 @@
+/*导航条样式*/
+.nav {
+    min-width: 1180px;
+    padding: 0;
+    background: red;
+}
+
+.nav_first {
+    height: 45px;
+    min-width: 200px;
+    background: #c60a0a;
+    line-height: 45px;
+}
+
+.nav > li > a {
+    font-size: 14px;
+    font-weight: inherit;
+}
+
+.nav:first-child span {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    color: gainsboro;
+    text-decoration: none;
+    background: none;
+}
+
+/*轮播图样式*/
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.banner ul li {
+    list-style: none;
+    float: left;
+}
+
+#b04 {
+    width: 100%;
+    height: 500px;
+}
+
+#b04 .dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+}
+
+#b04 .dots li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    text-indent: -999em;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: .4;
+    -webkit-transition: background .5s, opacity .5s;
+    -moz-transition: background .5s, opacity .5s;
+    transition: background .5s, opacity .5s;
+}
+
+#b04 .dots li.active {
+    background: #fff;
+    opacity: 1;
+}
+
+#b04 .arrow {
+    position: absolute;
+    top: 200px;
+}
+
+#b04 #al {
+    left: 15px;
+}
+
+#b04 #ar {
+    right: 15px;
+}
+
+#b04 img {
+    width: 100%;
+    height: 510px;
+}
+
+/*分类菜单样式*/
+
+#cate_id {
+    min-height: 512px;
+    position: relative;
+}
+
+#cate_id > li {
+    background: #e2e2e3;
+    padding: 4px 10px;
+    width: 200px;
+}
+
+#cate_id > li:hover {
+    background: #ffffff;
+}
+
+.sub {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    height: 555px;
+    background: #ffffff;
+}
+
+.sub1 {
+    display: inline-block;
+    width: 80px;
+    height: 20px;
+    padding: 5px;
+}
+
+.sub2 {
+    display: inline-block;
+    width: 720px;
+}
+
+.sub2 > a {
+    padding: 10px;
+    color: #999999;
+
+}
+
+/*搜索框*/
+.search {
+    margin-left: 100px;
+    padding: 10px;
+    min-width: 800px;
+}
+
+.search > form {
+    background: red;
+    display: inline-block;
+    margin-left: 100px;
+    min-width: 250px;
+    height: 32px;
+    padding: 1px;
+}
+
+.search > form > input {
+    height: 30px;
+    outline: none;
+}
+
+.search > form > input[type=text] {
+    width: 80%;
+    padding-left: 5px;
+}
+
+.search > form > input[type=submit] {
+    width: 18%;
+    border: none;
+    background: none;
+    margin-left: -2px;
+    margin-top: -1px;
+}
