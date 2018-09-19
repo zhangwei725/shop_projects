@@ -10,8 +10,8 @@ SECRET_KEY = 'xpd*oa^v$&=o4j^a*p@$!+jfcnj9(0+h@z33!k(xo986bbrjfj'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-# 拆分apps
-# 系统内置app
+
+
 SYS_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

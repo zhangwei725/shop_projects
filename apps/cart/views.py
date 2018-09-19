@@ -1,6 +1,5 @@
 from django.db.models import F
 from django.http import HttpResponse
-from django.shortcuts import render
 
 from apps.home.models import ShopCar
 from django.views.decorators.csrf import csrf_exempt
@@ -17,7 +16,6 @@ def add(request):
         uid = 1
         shop_id = request.POST.get('shop_id')
         number = request.POST.get('number')
-
         """
         当商品已经存在用户的购物车的时候,更新数量
         当商品不存在用户的购物车的时候 创建该记录

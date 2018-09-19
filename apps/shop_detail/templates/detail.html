@@ -37,7 +37,8 @@
             $('#search_img li').mouseover(function () {
                 var img_url = $(this).attr('data')
                 $('#search_img>img').attr('src', '/static/img/single/' + img_url + '.jpg')
-            })
+            });
+
             {#     添加购物车#}
             $('#add').click(function () {
                 {#  发送ajax请求#}

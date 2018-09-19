@@ -5,7 +5,6 @@
 *       对象类型  传递的数据比较多的时候建议使用该方式(推荐)  {shop_id:1
 *                    number:1
 *       }
-
 *     403错误 防止跨域攻击
 *     1> 如果是ajax请求直接使用  'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()
 *     2> 也可以在服务端解决

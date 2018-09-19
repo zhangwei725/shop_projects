@@ -1,5 +1,20 @@
-
-    <div>
-        <div id="head_left"></div>
-        <div id="head_right"></div>
+<div class="clear" style="padding: 5px">
+    <div id="head_left" style="float: left">
+        <a href="/"><span class="glyphicon glyphicon-home"></span><span>天猫首页</span></a> <span>喵，欢迎来天猫 </span>
+        {% if request.user.is_authenticated %}
+            <span>{{ request.user.username }}</span>
+            <a href="#">登出</a>
+        {% else %}
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+        {% endif %}
     </div>
+    <div id="head_right" style="float: right">
+        <a href="#">我的订单</a>
+
+        <a href="#" style="padding-left: 1px">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+            <span style="padding-left: 2px">购物车{{ request.user.userprofile.count }}件</span>
+        </a>
+    </div>
+</div>
