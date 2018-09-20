@@ -4,5 +4,7 @@ from apps.cart import views
 
 urlpatterns = [
     url('add/', views.add),
-    url('list/', views.list, name='car_list')
+    url('list/', views.list, name='car_list'),
+    url('delete/', views.delete, name='car_delete'),
+    url('update/', views.update_num, name='car_update')
 ]

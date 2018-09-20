@@ -1,8 +1,7 @@
-
-
 from django.db.models import Sum
 
 from apps.home.models import ShopCar
+
 
 def shop_count(request):
     count = 0

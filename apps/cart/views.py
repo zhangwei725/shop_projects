@@ -4,7 +4,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
 
 from account.context_processors import shop_count
-from apps.home.models import ShopCar
+from apps.home.models import ShopCar, Shop
 from django.views.decorators.csrf import csrf_exempt
 
 
@@ -50,12 +50,34 @@ def add(request):
         return HttpResponse('1111')
 
 
+@csrf_exempt
 def delete(request):
-    pass
+    try:
+        car_id = request.POST.get('car_id')
+        car = ShopCar.objects.get(car_id=car_id, status=1)
+        car.status = -1
+        car.save(update_fields=['status'])
+        return JsonResponse({'status': 200, 'msg': 'success'})
+    except:
+        return JsonResponse({'status': 404, 'msg': 'error'})
 
 
+# 吐司
+@csrf_exempt
 def update_num(request):
-    pass
+    try:
+        ac = request.POST.get('ac')
+        car_id = request.POST.get('car_id')
+        if ac == '1':
+            count = ShopCar.objects.filter(car_id=car_id, status=1).update(number=F('number') + 1)
+        else:
+            count = ShopCar.objects.filter(car_id=car_id, status=1).update(number=F('number') - 1)
+        return JsonResponse({'status': 200, 'msg': 'success'})
+    except Exception as e:
+        pass
+
+
+# 减的操作
 
 
 @login_required

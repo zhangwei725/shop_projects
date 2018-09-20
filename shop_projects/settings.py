@@ -117,6 +117,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'apps/home/static'),
+    os.path.join(BASE_DIR, 'apps/cart/static'),
 )
 # 配置多媒体资源目录
 MEDIA_URL = '/media/'
