@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block page_main %}
+    <table>
+        <tr>
+            <th><input type="checkbox"> 全选</th>
+            <th>商品详情</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>总价</th>
+            <th>操作</th>
+        </tr>
+        {% for car in cars %}
+            <tr>
+                <td><input type="checkbox"></td>
+                <td><img src="/static/img/single/{{ car.shop.img.shop_img_id }}.jpg" width="50"><a
+                        href="">{{ car.shop.name }}</a>
+                </td>
+                <td>{{ car.shop.promote_price }}</td>
+                <td><input type="number" min="1" max="{{ car.shop.stock }}" value="{{ car.number }}"></td>
+                <td>100</td>
+                <td><a href="#">删除</a></td>
+            </tr>
+
+        {% empty %}
+            空空如也<a href="#">浏览商品</a>
+        {% endfor %}
+
+
+    </table>
+
+
+{% endblock %}

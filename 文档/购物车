@@ -12,6 +12,12 @@
 *     from django.views.decorators.csrf import csrf_exempt
 *     @csrf_exempt
 */
+该函数必须登录才能使用
+1>在函数上使用 @login_required
+2>在settings.py文件中设置跳转登录界面的url地址 LOGIN_URL =''
+
+
+
 
 添加购物车的步骤
 参数  商品的数量
@@ -21,7 +27,12 @@
 1>当商品已经存在用户的购物车的时候,更新数量
 2>当商品不存在用户的购物车的时候 创建该记录
 """
-
+全局变量定义
+# 如何自定义全局的模板变量
+# 1>在app下新建一个 context_processors.py文件
+# 2>在文件中创建一个函数  根据业务逻辑返回字典对象
+# 3>在settings.py文件中的 TEMPLATES 的 context_processors中注册
+# 4 在模板中使用字典的键获取值
 
 2> 删除商品   删除
 3> 修改购物车的商品的数量  改

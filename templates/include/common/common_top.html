@@ -12,9 +12,13 @@
     <div id="head_right" style="float: right">
         <a href="#">我的订单</a>
 
-        <a href="#" style="padding-left: 1px">
+        <a href="{% url 'car_list' %}" style="padding-left: 1px">
             <span class="glyphicon glyphicon-shopping-cart"></span>
-            <span style="padding-left: 2px">购物车{{ request.user.userprofile.count }}件</span>
+            <span id="car_id" style="padding-left: 2px">购物车
+                {% if request.user.is_authenticated %}
+                    {{ count }}件
+                {% endif %}
+            </span>
         </a>
     </div>
 </div>

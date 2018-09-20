@@ -10,11 +10,12 @@ from django.shortcuts import render
 from apps.home.models import ShopCar
 
 
+# 维护  需求是一致在变化的
+
 def login_view(request):
     username = request.GET.get('username')
     password = request.GET.get('password')
     user = authenticate(request, username=username, password=password)
     if user and user.is_active:
-        user.userprofile.count = ShopCar.objects.filter(user_id=user.userprofile.uid).aggregate(Sum('number'))
         login(request, user)
     return HttpResponse(11111)

@@ -11,7 +11,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 SYS_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,6 +42,7 @@ MY_APPS = [
     # 搜索模块
     'apps.search',
 ]
+
 # 注册apps
 INSTALLED_APPS = SYS_APPS + EXT_APPS + MY_APPS
 
@@ -61,15 +61,16 @@ ROOT_URLCONF = 'shop_projects.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
+            # 上下文处理
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'apps.account.context_processors.shop_count',
             ],
         },
     },
@@ -120,3 +121,5 @@ STATICFILES_DIRS = (
 # 配置多媒体资源目录
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# 全局跳转登录的url地址
+LOGIN_URL = '/account/login/'
