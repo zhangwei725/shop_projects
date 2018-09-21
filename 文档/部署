@@ -1,0 +1,5 @@
+nginx ->反向代理  ---不支持python语言  处理静态资源  10w并发  nginx 6w
+
+gunicorn --> uwsgi
+
+

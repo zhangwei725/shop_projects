@@ -84,6 +84,12 @@ DATABASES = {
         'NAME': 'shop',
         'USER': 'root',
         'PASSWORD': 'root',
+    },
+    'mysql1': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'shop',
+        'USER': 'root',
+        'PASSWORD': 'root',
     }
 }
 
@@ -124,3 +130,13 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # 全局跳转登录的url地址
 LOGIN_URL = '/account/login/'
+
+# ============支付宝配置相关==========
+APP_ID = '2016072900120438'
+ALI_PAY_URL = ''
+# 测试支付环境
+ALI_PAY_DEV_URL = 'https://openapi.alipaydev.com/gateway.do?'
+# 公钥配置
+APP_PUBLIC_STRING = open(BASE_DIR + '/pay/app_public_key.pem').read()
+# 私钥配置
+APP_PRIVATE_STRING = open(BASE_DIR + '/pay/app_private_key.pem').read()

@@ -140,7 +140,7 @@ class Order(models.Model):
         (-1, '删除'),
     )
 
-    oid = models.AutoField('订单ID', primary_key=True)
+    oid = models.BigAutoField('订单ID', primary_key=True)
     # 订单号唯一
     order_code = models.CharField('订单号', max_length=255)
     address = models.CharField('配送地址', max_length=255)

@@ -85,4 +85,4 @@ def list(request):
     cars = ShopCar.objects.filter(user_id=request.user.userprofile.uid, status=1)
     for car in cars:
         car.shop.img = car.shop.shopimage_set.all().first()
-    return render(request, 'cart.html', {'cars': cars})
+    return render(request, 'car.html', {'cars': cars})
